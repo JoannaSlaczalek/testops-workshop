@@ -15,6 +15,7 @@ services:
       - /usr/local/bin/docker:/usr/local/bin/docker
   mariadb:
     image: 'bitnami/mariadb:latest'
+    privileged: true
     environment:
       - ALLOW_EMPTY_PASSWORD=yes
       - MARIADB_ROOT_PASSWORD=admin
